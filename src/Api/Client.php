@@ -114,6 +114,7 @@ class Client
             'headers'=> [
                 'Authorization' => 'OAuth '.$this->token,
                 'X-Org-ID'      => $this->orgId,
+                'X-Cloud-Org-ID' => $this->orgId,
             ],
         ];
 
@@ -239,7 +240,7 @@ class Client
 
         return !empty($body) ? json_encode($body) : '';
     }
-    
+
     private function __construct(){}
     private function __clone(){}
 }
