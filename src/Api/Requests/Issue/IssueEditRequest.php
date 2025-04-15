@@ -19,6 +19,7 @@ use BugrovWeb\YandexTracker\Api\Client;
  * @method IssueEditRequest priority(array|string|int $priority) Приоритет задачи
  * @method IssueEditRequest followers(array $followersArray) Идентификаторы или логины наблюдателей задачи
  * @method IssueEditRequest externald(int $externalId) Внешний ID
+ * @method IssueEditRequest reportNumber(string $reportNumber) Номер отчета
  */
 class IssueEditRequest extends IssueRequest
 {
@@ -44,6 +45,7 @@ class IssueEditRequest extends IssueRequest
      * @var array|string[] Параметры, доступные в теле запроса
      */
     protected array $bodyParams = [
+        'reportNumber',
         'externald',
         'summary',
         'parent',
